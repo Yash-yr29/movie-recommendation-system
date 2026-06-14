@@ -136,7 +136,7 @@ This version produced more accurate and meaningful recommendations by emphasizin
 
 ---
 
-# 7 . URl
+# 7 . URL
 
 * https://movie-recommendation-system-29.streamlit.app
 
