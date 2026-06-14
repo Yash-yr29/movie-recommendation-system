@@ -3,11 +3,12 @@ from joblib import load
 movies = load("model/movies_small.joblib")
 similarity = load("model/similarity_small.joblib")
 
-
 def recommend(movie):
 
+    movie = str(movie)
+
     movie_index = movies[
-        movies['title'].str.lower() == movie.lower()
+        movies['title'].astype(str).str.lower() == movie.lower()
     ].index[0]
 
     distances = similarity[movie_index]
