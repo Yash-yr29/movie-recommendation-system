@@ -7,7 +7,6 @@ os.makedirs("model", exist_ok=True)
 MOVIES_URL = "https://drive.google.com/uc?id=115kMWMDIhHJ1lKdVbgaCyvICYQblVIhi"
 SIMILARITY_URL = "https://drive.google.com/uc?id=1fPgBdhl_Uxiek9lGVEh5xIU6sVaZKapj"
 
-# Download movies.joblib
 if not os.path.exists("model/movies.joblib"):
     print("Downloading movies.joblib...")
     gdown.download(
@@ -16,7 +15,6 @@ if not os.path.exists("model/movies.joblib"):
         quiet=False
     )
 
-# Download similarity_final.joblib
 if not os.path.exists("model/similarity_final.joblib"):
     print("Downloading similarity_final.joblib...")
     gdown.download(
@@ -25,13 +23,20 @@ if not os.path.exists("model/similarity_final.joblib"):
         quiet=False
     )
 
-print("Loading models...")
-
+print("Loading movies...")
 movies = load("model/movies.joblib")
+print("Movies loaded successfully!")
+
+print("Loading similarity...")
 similarity = load("model/similarity_final.joblib")
+print("Similarity loaded successfully!")
 
 print("Movies Shape:", movies.shape)
-print("Similarity Shape:", similarity.shape)
+
+try:
+    print("Similarity Shape:", similarity.shape)
+except Exception as e:
+    print("Similarity Error:", e)
 
 def recommend(movie):
 
