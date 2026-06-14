@@ -123,3 +123,23 @@ This version produced more accurate and meaningful recommendations by emphasizin
 * NLTK
 * Streamlit
 * Joblib
+
+---
+
+# 6. Challenges Faced
+
+* Handling nested dictionary columns
+* Extracting cast and crew information
+* Managing large similarity matrices
+* Optimizing recommendation quality
+* GitHub file size limitations
+
+---
+
+# 7. Future Improvements
+
+* TF-IDF Vectorization
+* Hybrid Recommendation System
+* Deep Learning-Based Recommendations
+* User Preference-Based Recommendations
+* LLM-Powered Movie Assistant
